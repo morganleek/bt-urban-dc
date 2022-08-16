@@ -1,0 +1,18 @@
+.wp-block-getwid-content-slider {
+	.wp-block-getwid-content-slider__wrapper {
+		.slick-list {
+			overflow: visible !important;
+		}
+	}
+	.wp-block-getwid-content-slider-slide {
+		width: auto !important;
+		.wp-block-getwid-content-slider-slide__wrapper {
+			.wp-block-image {
+				max-width: 1220px;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
