@@ -37,6 +37,7 @@
 			add_action( 'after_setup_theme', [ $this, 'bones_theme_support' ] );
 			add_action( 'admin_init', [$this, 'bones_theme_editor_styles' ] );
 			add_action( 'wp_head', [ $this, 'bones_theme_preload_webfonts' ] );
+			add_action( 'wp_head', [ $this, 'bones_theme_load_favicons' ] );
 			add_action( 'init', [ $this, 'bones_name_register_block_styles' ], 100 );
 
 			// Gallery Sliders
