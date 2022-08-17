@@ -43,6 +43,11 @@
 			add_action( 'wp_print_styles', [ $this, 'update_styles' ] );
 		}
 
+		public function bones_theme_load_favicons() {
+			print '<link rel="icon" href="' . get_theme_file_uri( 'assets/favicons/favicon.ico' ) . '" sizes="any">';
+			print '<link rel="icon" href="' . get_theme_file_uri( 'assets/favicons/favicon.svg' ) . '" type="image/svg+xml">';
+		}
+
 		public function plugin_enqueue() {
 			$this->enqueue->enqueue( 'app', 'main', [] );
 
@@ -90,17 +95,24 @@
 		}
 
 		public function bones_theme_get_font_face_styles() {
-			return "";
-			// return "
-			// @font-face{
-			// 	font-family: 'Source Serif Pro';
-			// 	font-weight: 200 900;
-			// 	font-style: normal;
-			// 	font-stretch: normal;
-			// 	font-display: swap;
-			// 	src: url('" . get_theme_file_uri( 'assets/fonts/SourceSerif4Variable-Roman.ttf.woff2' ) . "') format('woff2');
-			// }
-			// ";
+			return "
+				@font-face {
+					font-family: 'Larsseit-Light';
+					font-weight: 300;
+					font-style: normal;
+					font-stretch: normal;
+					font-display: swap;
+					src: url('" . get_theme_file_uri( 'assets/fonts/Larsseit-Light.woff2' ) . "') format('woff2');
+				}
+				@font-face {
+					font-family: 'Larsseit-Bold';
+					font-weight: 600;
+					font-style: normal;
+					font-stretch: normal;
+					font-display: swap;
+					src: url('" . get_theme_file_uri( 'assets/fonts/Larsseit-Bold.woff2' ) . "') format('woff2');
+				}
+			";
 		}
 
 		public function bones_theme_preload_webfonts() {
@@ -115,10 +127,10 @@
 			] );
 	
 			// Cover
-			// register_block_style( 'core/cover', [
-			//   'name' => 'banner-reversed',
-			//   'label' => __( 'Reversed', 'bones_name' ),
-			// ] );
+			register_block_style( 'core/cover', [
+				'name' => 'show-over-on-hover',
+				'label' => __( 'Show Overlay on Hover', 'bones_name' ),
+			] );
 	
 			// Columns
 			// register_block_style( 'core/columns', [
@@ -132,15 +144,15 @@
 	
 			// Gallery
 			register_block_style( 'core/gallery', [
-			  'name' => 'gallery-slider',
-			  'label' => __( 'Slider', 'bones_name' ),
+				'name' => 'gallery-slider',
+				'label' => __( 'Slider', 'bones_name' ),
 			] );
 	
 			// Buttons
-			// register_block_style( 'core/button', [
-			//   'name' => 'play',
-			//   'label' => __( 'Play', 'bones_name' ),
-			// ] );
+			register_block_style( 'core/button', [
+				'name' => 'arrow',
+				'label' => __( 'Arrow', 'bones_name' ),
+			] );
 		}
 
 		public function update_gallery_styles( $styles ) {

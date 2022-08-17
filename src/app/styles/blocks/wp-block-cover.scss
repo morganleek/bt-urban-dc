@@ -3,6 +3,8 @@
 .wp-block-cover {
 	padding: 1.25em var(--wp--custom--padding--horizontal);	
 	&.alignfull {
+		height: 50.855vw;
+		max-height: 90vh;
 		& + .wp-block-group.alignfull {
 			margin-top: 0;
 		}
@@ -14,7 +16,19 @@
 		.wp-block-cover__inner-container {
 			max-width: max(66%, 500px);
 		}
-	}	
+	}
+	&.is-style-show-over-on-hover {
+		.wp-block-cover__background, 
+		.wp-block-cover__inner-container {
+			transition: opacity 0.3s;
+		}
+		&:not(:hover) {
+			.wp-block-cover__background, 
+			.wp-block-cover__inner-container {
+				opacity: 0;
+			}	
+		}
+	}
 	.wp-block-cover__inner-container {
 		@include mixins.trim;
 		max-width: var(--wp--custom--sizing--narrow);

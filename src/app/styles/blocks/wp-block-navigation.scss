@@ -1,0 +1,55 @@
+.wp-block-navigation {
+	.wp-block-navigation__responsive-container {
+		left: 50%;
+	}
+	.wp-block-navigation__container {
+		width: 100%;
+		gap: 0 !important;
+		& > li {
+			border-bottom: 1px solid #fff;
+			width: 100%;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+		}
+		a {
+			font-size: var(--wp--custom--typography--font-size--heading-2);
+		}
+	}
+	.wp-block-navigation__responsive-container-open.always-shown {
+		transition: opacity 0.3s;
+		svg {
+			display: none;
+		}
+		&::before {
+			content: '';
+			width: 30px;
+			height: 25px;
+			background: url(./images/hamburger.svg) 50% 50%/100% auto no-repeat;
+			@media (min-width: 1440px) {
+				width: min(2.083333vw, 40px);
+			}
+		}
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+	.wp-block-navigation__responsive-container-close {
+		transition: opacity 0.3s;
+		svg {
+			display: none;
+		}
+		&::before {
+			content: '';
+			width: 24px;
+			height: 31px;
+			background: url(./images/close.svg) 0 0/100% auto no-repeat;
+			display: block;
+			@media (min-width: 1440px) {
+				width: min(1.614583vw, 31px);
+			}
+		}
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+}

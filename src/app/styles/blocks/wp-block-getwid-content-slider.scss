@@ -5,14 +5,29 @@
 		}
 	}
 	.wp-block-getwid-content-slider-slide {
-		width: auto !important;
+		width: 80vw !important;
 		.wp-block-getwid-content-slider-slide__wrapper {
-			.wp-block-image {
+			.wp-block-cover {
 				max-width: 1220px;
-				img {
-					width: 100%;
-				}
+				width: 100%;
 			}
+		}
+	}
+	button.slick-arrow {
+		background: url(./images/chevron-right.svg) 50% 50%/100% auto no-repeat;
+		width: 15px;
+		height: 35px;
+		@media (min-width: 1440px) {
+			width: min(1.04166vw, 20px);
+		}
+		&[aria-disabled="true"] {
+			opacity: 0;
+		}
+		&::before {
+			display: none;
+		}
+		&.slick-prev {
+			transform: translate(0,-50%) rotate(180deg);
 		}
 	}
 }

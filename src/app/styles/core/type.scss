@@ -46,6 +46,7 @@ p {
 * {
 	&:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
 		strong {
+			font-family: var(--wp--preset--font-family--larsseit-bold);
 			// @font-face with custom weights
 			// font-family: var(--wp--preset--font-family--geometric-slab-bold);
 			// font-weight: normal;

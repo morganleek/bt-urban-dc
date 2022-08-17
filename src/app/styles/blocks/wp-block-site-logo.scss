@@ -1,0 +1,23 @@
+.wp-block-site-logo {
+	svg {
+		width: 120px;
+		transform: translate(-30%, 0);
+		transform-origin: top left;
+		transition: all var(--app--header--animation--time);
+		@media (min-width: 1440px) {
+			width: min(8.333333vw, 160px);
+		}
+		#living-with {
+			transition: opacity var(--app--header--animation--time);
+			opacity: 0;
+		}
+	}
+	.page-template-overlay-header:not(.nav-is-fixed) & {
+		svg {
+			transform: translate(-30%, 0) scale(1.6125);
+			#living-with {
+				opacity: 1;
+			}
+		}
+	}
+}

@@ -7,4 +7,23 @@
 	&:where( .has-background ) {
 		padding: 1.25em var(--wp--custom--padding--horizontal);
 	}
+	&.scroll-down {
+		margin-top: 0;
+		height: 0;
+		padding-top: min(50px, 5vh);
+		padding-bottom: min(50px, 5vh);
+		.wp-block-image {
+			transform: translate(0, -50%);
+			img {
+				display: block;
+				width: 16px !important;
+				@media (min-width: 1440px) {
+					width: min(1.145833vw, 22px) !important;
+				}
+			}
+		}
+		& + * {
+			margin-top: 0;
+		}
+	}
 }

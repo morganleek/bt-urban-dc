@@ -41,7 +41,18 @@ module.exports = {
 			// dependencies.
 			optimizeForGutenberg: false,
 			// Extra webpack config to be passed directly
-			webpackConfig: undefined,
+			webpackConfig: {
+				module: {
+					rules: [
+						{
+							test: /\.svg$/,
+							use: [
+								'url-loader'
+							]
+						}
+					]
+				}
+			}
 		},
 		// If has more length, then multi-compiler
 	],

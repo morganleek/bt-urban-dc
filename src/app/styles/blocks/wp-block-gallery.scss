@@ -24,4 +24,13 @@
 			}
 		}
 	}
+	&.social-links {
+		
+		img {
+			width: 28px !important;
+			@media (min-width: 1440px) {
+				width: min(1.97916vw, 38px) !important;
+			}
+		}
+	}
 }

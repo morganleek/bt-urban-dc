@@ -1,11 +1,47 @@
 header {
-	&.wp-block-template-part {
-
+	position: fixed;
+	padding-left: var(--wp--custom--spacing--outer);
+	padding-right: var(--wp--custom--spacing--outer);
+	z-index: 100;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.95);
+	backdrop-filter: blur(10px);
+	transition: background-color var(--app--header--animation--time);
+	& > .wp-block-group {
+		padding: min(2.2395vw, 43px) 0;
+	}
+	.page-template-overlay-header:not(.nav-is-fixed) & {
+		position: absolute;
+		top: 10px;
+		background-color: transparent;
+		backdrop-filter: none;
 	}
 }
 
 footer {
 	&.wp-block-template-part {
 		margin-block-start: 0;
+		& > * {
+			align-items: flex-end;
+		}
+		padding-bottom: 124px;
+		@media (min-width: 1440px) {
+			padding-bottom: min(8.59375vw, 165px);
+		}
+		a {
+			transition: all 0.3s;
+			&:hover {
+				text-decoration-color: #000;
+			}
+			&[href^="mailto:"] {
+				text-decoration-color: #000;
+				&:hover {
+					text-decoration-color: #fff;
+				}
+			}
+		}
 	}
 }
+

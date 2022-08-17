@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@svgr/webpack": "^6.3.1",
     "@wpackio/scripts": "^6.4.0",
     "postcss": "^8.4.16",
-    "sass": "^1.54.4"
+    "sass": "^1.54.4",
+    "url-loader": "^4.1.1"
   },
   "scripts": {
     "bootstrap": "wpackio-scripts bootstrap",
@@ -15,6 +17,8 @@
   },
   "dependencies": {
     "@wpackio/entrypoint": "^6.4.0",
-    "tiny-slider": "^2.9.4"
+    "gsap": "^3.11.0",
+    "tiny-slider": "^2.9.4",
+    "tom-select": "^2.1.0"
   }
 }

@@ -1,52 +1,44 @@
 {
-  "app/main.js.map": "app/main.js.map",
-  "editor.js": "app/editor.js",
-  "editor.js.map": "app/editor.js.map",
-  "main.css": "app/main.css",
-  "main.css.map": "app/main.css.map",
-  "main.js": "app/main.js",
-  "main.js.map": "main.51f9a056fe83351978e6.hot-update.js.map",
-  "runtime.js": "app/runtime.js",
-  "runtime.js.map": "app/runtime.js.map",
-  "vendors~editor~main.js": "app/vendors~editor~main.js",
-  "vendors~editor~main.js.map": "app/vendors~editor~main.js.map",
-  "vendors~main.js": "app/vendors~main.js",
-  "vendors~main.js.map": "app/vendors~main.js.map",
+  "editor.js": "app/editor-a8ba74d6.js",
+  "editor.js.map": "app/editor-a8ba74d6.js.map",
+  "main.css": "app/main-79259ab4.css",
+  "main.css.map": "app/main-79259ab4.css.map",
+  "main.js": "app/main-fc23b371.js",
+  "main.js.map": "app/main-fc23b371.js.map",
+  "runtime.js": "app/runtime-6974b681.js",
+  "runtime.js.map": "app/runtime-6974b681.js.map",
+  "vendors~main.js": "app/vendors~main-535702d0.js",
+  "vendors~main.js.map": "app/vendors~main-535702d0.js.map",
   "wpackioEp": {
     "main": {
       "assets": {
         "js": [
-          "app/runtime.js",
-          "app/vendors~editor~main.js",
-          "app/vendors~main.js",
-          "app/main.js"
+          "app/runtime-6974b681.js",
+          "app/vendors~main-535702d0.js",
+          "app/main-fc23b371.js"
         ],
         "js.map": [
-          "app/runtime.js.map",
-          "app/vendors~editor~main.js.map",
-          "app/vendors~main.js.map",
-          "app/main.js.map",
-          "main.51f9a056fe83351978e6.hot-update.js.map"
+          "app/runtime-6974b681.js.map",
+          "app/vendors~main-535702d0.js.map",
+          "app/main-fc23b371.js.map"
         ],
         "css": [
-          "app/main.css"
+          "app/main-79259ab4.css"
         ],
         "css.map": [
-          "app/main.css.map"
+          "app/main-79259ab4.css.map"
         ]
       }
     },
     "editor": {
       "assets": {
         "js": [
-          "app/runtime.js",
-          "app/vendors~editor~main.js",
-          "app/editor.js"
+          "app/runtime-6974b681.js",
+          "app/editor-a8ba74d6.js"
         ],
         "js.map": [
-          "app/runtime.js.map",
-          "app/vendors~editor~main.js.map",
-          "app/editor.js.map"
+          "app/runtime-6974b681.js.map",
+          "app/editor-a8ba74d6.js.map"
         ]
       }
     }

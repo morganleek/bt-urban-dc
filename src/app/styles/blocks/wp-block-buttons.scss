@@ -1,6 +1,27 @@
 .wp-block-buttons {
 	.wp-block-button {
-		.wp-block-button__link {
+		&.is-style-arrow {
+			width: 100%;
+			.wp-block-button__link {
+				font-size: var(--wp--preset--font-size--large);
+				border-top: 1px solid #fff;
+				border-bottom: 1px solid #fff;
+				padding: 0.5em 0;
+				// padding-left: 0;
+				// padding-right: 0;
+				width: 100%;
+				text-align: left;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				&::after {
+					content: '';
+					width: 31px;
+					height: 25px;
+					background: url(./images/arrow.svg) 50% 50%/100% auto	no-repeat;
+					display: block;
+				}
+			}
 		}
 	}
 }
