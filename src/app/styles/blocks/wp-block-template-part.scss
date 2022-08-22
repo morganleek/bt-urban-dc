@@ -1,4 +1,5 @@
 header {
+	--wp--custom--spacing--outer: min(5.208333333333334vw, 100px);
 	position: fixed;
 	padding-left: var(--wp--custom--spacing--outer);
 	padding-right: var(--wp--custom--spacing--outer);
@@ -22,7 +23,7 @@ header {
 
 footer {
 	&.wp-block-template-part {
-		margin-block-start: 0;
+		margin-block-start: min(10.416666vw, 200px);
 		& > * {
 			align-items: flex-end;
 		}

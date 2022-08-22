@@ -1,6 +1,6 @@
 .wp-site-blocks {
 	overflow: hidden;
-	body:not(.page-template-overlay-header) {
+	body:not(.page-template-overlay-header) & {
 		padding-top: var(--app--header--height, 160px);
 	}
 }

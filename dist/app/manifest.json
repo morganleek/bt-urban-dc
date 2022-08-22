@@ -1,32 +1,32 @@
 {
   "editor.js": "app/editor-a8ba74d6.js",
   "editor.js.map": "app/editor-a8ba74d6.js.map",
-  "main.css": "app/main-79259ab4.css",
-  "main.css.map": "app/main-79259ab4.css.map",
-  "main.js": "app/main-fc23b371.js",
-  "main.js.map": "app/main-fc23b371.js.map",
+  "main.css": "app/main-1f7798b6.css",
+  "main.css.map": "app/main-1f7798b6.css.map",
+  "main.js": "app/main-b938c22d.js",
+  "main.js.map": "app/main-b938c22d.js.map",
   "runtime.js": "app/runtime-6974b681.js",
   "runtime.js.map": "app/runtime-6974b681.js.map",
-  "vendors~main.js": "app/vendors~main-535702d0.js",
-  "vendors~main.js.map": "app/vendors~main-535702d0.js.map",
+  "vendors~main.js": "app/vendors~main-ecd615ae.js",
+  "vendors~main.js.map": "app/vendors~main-ecd615ae.js.map",
   "wpackioEp": {
     "main": {
       "assets": {
         "js": [
           "app/runtime-6974b681.js",
-          "app/vendors~main-535702d0.js",
-          "app/main-fc23b371.js"
+          "app/vendors~main-ecd615ae.js",
+          "app/main-b938c22d.js"
         ],
         "js.map": [
           "app/runtime-6974b681.js.map",
-          "app/vendors~main-535702d0.js.map",
-          "app/main-fc23b371.js.map"
+          "app/vendors~main-ecd615ae.js.map",
+          "app/main-b938c22d.js.map"
         ],
         "css": [
-          "app/main-79259ab4.css"
+          "app/main-1f7798b6.css"
         ],
         "css.map": [
-          "app/main-79259ab4.css.map"
+          "app/main-1f7798b6.css.map"
         ]
       }
     },

@@ -14,7 +14,7 @@
 	}
 	.page-template-overlay-header:not(.nav-is-fixed) & {
 		svg {
-			transform: translate(-30%, 0) scale(1.6125);
+			transform: translate(0, 50%) scale(2.3125); // translate(-30%, 0) 
 			#living-with {
 				opacity: 1;
 			}

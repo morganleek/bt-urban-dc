@@ -8,15 +8,30 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin( ScrollTrigger );
 
 document.addEventListener( 'DOMContentLoaded', () => {
-	document.querySelectorAll( '.wp-block-gallery.is-style-gallery-slider' ).forEach( ( slides ) => {
-		const slider = tns( {
-			container: slides,
-			items: 1,
-			slideBy: 'page',
-			autoplay: true,
-			nonce: 'blurns'
+	// Year in Footer
+	let date = new Date();
+	document.querySelectorAll( 'footer p' ).forEach( ( p ) => {
+		p.innerHTML = p.innerHTML.replace( '{{year}}', date.getFullYear() );
+	} );
+
+	// Scroll Down
+	document.querySelectorAll( '.scroll-down a' ).forEach( ( link ) => {
+		link.addEventListener( 'click', ( e ) => { 
+			e.preventDefault();
+			e.target.closest( '.scroll-down' )?.scrollIntoView( { block: 'start', behavior: 'smooth' } );
 		} );
 	} );
+
+
+	// document.querySelectorAll( '.wp-block-gallery.is-style-gallery-slider' ).forEach( ( slides ) => {
+	// 	const slider = tns( {
+	// 		container: slides,
+	// 		items: 1,
+	// 		slideBy: 'page',
+	// 		autoplay: true,
+	// 		nonce: 'blurns'
+	// 	} );
+	// } );
 
 	// Nav Scroll Lock
 	if( document.querySelector( '.page-template-overlay-header' ) ) {

@@ -1,6 +1,24 @@
 .wp-block-navigation {
 	.wp-block-navigation__responsive-container {
 		left: 50%;
+    height: 100vh;
+    display: flex;
+    transform: translate(100%, 0);
+    transition: all 0.3s;
+		opacity: 1;
+		background: #000 !important;
+		color: #fff !important;
+		padding: 2rem;
+		z-index: 1000;
+		&:not(.is-menu-open) {
+			background: #000 !important;
+			.wp-block-navigation__responsive-container-content {
+				padding-top: calc(2rem + 24px);
+			}
+		}
+		&.is-menu-open {
+			transform: translate(0, 0);
+		}
 	}
 	.wp-block-navigation__container {
 		width: 100%;
