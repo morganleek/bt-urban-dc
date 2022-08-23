@@ -6,10 +6,25 @@
 	&.is-style-logo {
 		max-width: 47%;
 	}
-	img {
-		
-	}
-	figcaption {
+}
 
+#baguetteBox-overlay {
+	#close-button.baguetteBox-button {
+		background-color: transparent;
+		border-radius: 0;
+		// width: 30px;
+		// height: 30px;
+
+		svg {
+			g {
+				stroke-width: 2px;
+				stroke: #fff;
+			}
+		// 	display: none;
+		}
+	}
+	.full-image {
+		padding: 20px;
+    box-sizing: border-box;
 	}
 }

@@ -182,7 +182,7 @@ form {
 			background-color: transparent;
 			resize: none;
 			width: 100%;
-			padding: 0;
+			padding: 16px 0;
 			font-size: var(--wp--preset--font-size--large);
 			font-family: var(--wp--preset--font-family--larsseit-light);
 			transition: border-color 0.3s;
@@ -198,6 +198,9 @@ form {
 		}
 	}
 	.frm_submit {
+		@media (min-width: 600px) {
+			margin-left: 51%;
+		}
 		input[type="submit"],
 		button {
 			margin: 0;
