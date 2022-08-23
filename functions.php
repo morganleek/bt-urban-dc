@@ -33,7 +33,7 @@
 				'regular'
 			);
 			// Enqueue a few of our entry points
-			add_action( 'wp_enqueue_scripts', [ $this, 'plugin_enqueue' ] );
+			add_action( 'wp_enqueue_scripts', [ $this, 'plugin_enqueue' ], 100 );
 			add_action( 'after_setup_theme', [ $this, 'bones_theme_support' ] );
 			add_action( 'admin_init', [$this, 'bones_theme_editor_styles' ] );
 			add_action( 'wp_head', [ $this, 'bones_theme_preload_webfonts' ] );
@@ -96,24 +96,23 @@
 		}
 
 		public function bones_theme_get_font_face_styles() {
-			return "
-				@font-face {
-					font-family: 'Larsseit-Light';
-					font-weight: 300;
-					font-style: normal;
-					font-stretch: normal;
-					font-display: swap;
-					src: url('" . get_theme_file_uri( 'assets/fonts/Larsseit-Light.woff2' ) . "') format('woff2');
-				}
-				@font-face {
-					font-family: 'Larsseit-Bold';
-					font-weight: 600;
-					font-style: normal;
-					font-stretch: normal;
-					font-display: swap;
-					src: url('" . get_theme_file_uri( 'assets/fonts/Larsseit-Bold.woff2' ) . "') format('woff2');
-				}
-			";
+			return "";
+			// return "
+			// 	@font-face {
+			// 		font-family: 'Larsseit-Light';
+			// 		src: url('" . get_theme_file_uri( 'assets/fonts/Larsseit-Light.woff2' ) . "') format('woff2');
+			// 		font-weight: normal;
+			// 		font-style: normal;
+			// 	}
+			// 	@font-face {
+			// 		font-family: 'Larsseit-Bold';
+			// 		font-weight: 300;
+			// 		font-style: normal;
+			// 		font-stretch: normal;
+			// 		font-display: swap;
+			// 		src: url('" . get_theme_file_uri( 'assets/fonts/Larsseit-Bold.woff2' ) . "') format('woff2');
+			// 	}
+			// ";
 		}
 
 		public function bones_theme_preload_webfonts() {
@@ -152,7 +151,18 @@
 			// Buttons
 			register_block_style( 'core/button', [
 				'name' => 'arrow',
+				'label' => __( 'Arrow Borded', 'bones_name' ),
+			] );
+
+			register_block_style( 'core/button', [
+				'name' => 'arrow-no-arrow',
 				'label' => __( 'Arrow', 'bones_name' ),
+			] );
+
+			// Images
+			register_block_style( 'core/image', [
+				'name' => 'logo',
+				'label' => __( 'Logo', 'bones_name' ),
 			] );
 		}
 

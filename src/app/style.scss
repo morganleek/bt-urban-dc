@@ -12,6 +12,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+@font-face {
+	font-family: "Larsseit-Light";
+	src: url('../../assets/fonts/Larsseit-Light.otf') format("opentype");
+}
+@font-face {
+	font-family: "Larsseit-Bold";
+	src: url('../../assets/fonts/Larsseit-Bold.otf') format("opentype");
+}
+
 // body {}
 
 // .wp-site-blocks {}

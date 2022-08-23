@@ -4,7 +4,11 @@
 	padding: 1.25em var(--wp--custom--padding--horizontal);	
 	&.alignfull {
 		height: 50.855vw;
-		max-height: 90vh;
+		max-height: calc(90vh - var(--app--header--height, 160px));
+		min-height: 0;
+		.page-template-overlay-header & {
+			max-height: 90vh;
+		}
 		& + .wp-block-group.alignfull {
 			margin-top: 0;
 		}

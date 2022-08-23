@@ -7,11 +7,25 @@ header {
 	left: 0;
 	right: 0;
 	top: 0;
-	background-color: rgba(0, 0, 0, 0.95);
+	background-color: #000; // rgba(0, 0, 0, 0.95);
 	backdrop-filter: blur(10px);
 	transition: background-color var(--app--header--animation--time);
+	body.admin-bar & {
+		@media (max-width: 782px) {
+			top: 46px;
+		}
+		top: 32px;
+	}	
+	&.block-editor-block-list__layout {
+		margin-left: calc( var(--wp--custom--spacing--outer) * -1 );
+		margin-right: calc( var(--wp--custom--spacing--outer) * -1 );
+	}
 	& > .wp-block-group {
-		padding: min(2.2395vw, 43px) 0;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		@media (min-width: 600px) {
+			padding: min(2.2395vw, 43px) 0; // min(1.5625vw, 30px); 
+		}
 	}
 	.page-template-overlay-header:not(.nav-is-fixed) & {
 		position: absolute;
@@ -23,13 +37,27 @@ header {
 
 footer {
 	&.wp-block-template-part {
-		margin-block-start: min(10.416666vw, 200px);
+		margin-block-start: 60px;
+		padding-bottom: 60px;
+		@media (min-width: 600px) {
+			padding-bottom: 124px;
+			margin-block-start: 157px;
+		}
+		@media (min-width: 1440px) {
+			margin-block-start: max(10.9375vw, 210px);
+			padding-bottom: min(8.59375vw, 165px);
+		}
 		& > * {
 			align-items: flex-end;
+			@media (max-width: 599px) {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 10px;
+			}
 		}
-		padding-bottom: 124px;
-		@media (min-width: 1440px) {
-			padding-bottom: min(8.59375vw, 165px);
+		p {
+			line-height: 1.2em;
 		}
 		a {
 			transition: all 0.3s;

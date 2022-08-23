@@ -27,11 +27,12 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
 	letter-spacing: 0;
+	
 	// margin-top: 1.4em;
 	// margin-bottom: 1.4em;
 	.has-large-font-size,
 	&.has-large-font-size {
-		line-height: 1.05em;
+		line-height: 1.6em;
 		// margin-top: 0.7em;
 		// margin-bottom: 0.7em;
 	}
@@ -58,6 +59,7 @@ form {
 	fieldset {
 		border: 0 none;
 		padding: 0;
+		margin: 0;
 	}	
 	input {
 		&:not([type="submit"]) {
@@ -65,8 +67,14 @@ form {
 			display: block;
 			border: 0 none;
 			border-bottom: 1px solid #fff;
+			border-bottom: 1px solid #fff;
 			background-color: transparent;
 			width: 100%;
+			font-size: var(--wp--preset--font-size--large);
+			line-height: 4rem;
+			font-family: var(--wp--preset--font-family--larsseit-light);
+			padding-left: 0;
+			padding-right: 0;
 			&::placeholder {
 				color: #fff;
 			}
@@ -80,6 +88,8 @@ form {
 		background-color: transparent;
 		resize: none;
 		width: 100%;
+		font-size: var(--wp--preset--font-size--large);
+		font-family: var(--wp--preset--font-family--larsseit-light);
 		&::placeholder {
 			color: #fff;
 		}
@@ -95,9 +105,151 @@ form {
 		color: #fff;
 		background-color: transparent;
 		border-radius: 0;
+		font-family: var(--wp--preset--font-family--larsseit-light);
+		font-size: var(--wp--preset--font-size--large);
+		display: flex;
+		column-gap: 50px;
+		padding-left: 0;
+		padding-right: 0;
+		// &::after {
+		// 	content: '->';
+		// 	margin-left: 5px;
+		// }
 		&::after {
-			content: '->';
-			margin-left: 5px;
+			content: '';
+			width: 31px;
+			height: 25px;
+			background: url(./images/arrow.svg) 50% 50%/100% auto	no-repeat;
+			display: block;
+			transform: translate(-10px, 0);
+			transition: all 0.3s cubic-bezier(0.5, 0, 0.25, 1);
+		}
+		&:hover {
+			&::after {
+				transform: translate(0, 0);
+			}
 		}
 	}
 }
+
+.frm_forms.with_frm_style { // frm_style_formidable-style
+	.frm_none_container {
+		margin-bottom: 0;
+	}
+	.form-field {
+		--text-color: #fff;
+		input[type=text], 
+		input[type=password], 
+		input[type=email], 
+		input[type=number], 
+		input[type=url], 
+		input[type=tel], 
+		input[type=file], 
+		select, 
+		input[type=search] {
+			box-sizing: border-box;
+			display: block;
+			border: 0 none;
+			border-bottom: 1px solid #fff;
+			border-radius: 0;
+			background-color: transparent;
+			width: 100%;
+			font-size: var(--wp--preset--font-size--large);
+			line-height: 4rem;
+			font-family: var(--wp--preset--font-family--larsseit-light);
+			padding: 0;
+			height: 4rem;
+			transition: border-color 0.3s;
+			&::placeholder {
+				color: #fff;
+			}
+			&:not([type=file]):focus {
+				background-color: transparent;
+				box-shadow: none;
+				color: #fff;
+				border-color: rgba(255, 255, 255, 0.6);
+			}
+			&:invalid {
+				color: #B94A48;
+			}
+		}
+		textarea {
+			display: block;
+			border: 0 none;
+			border-bottom: 1px solid #fff;
+			border-radius: 0;
+			color: #fff;
+			background-color: transparent;
+			resize: none;
+			width: 100%;
+			padding: 0;
+			font-size: var(--wp--preset--font-size--large);
+			font-family: var(--wp--preset--font-family--larsseit-light);
+			transition: border-color 0.3s;
+			&::placeholder {
+				color: #fff;
+			}
+			&:focus {
+				background-color: transparent;
+				box-shadow: none;
+				color: #fff;
+				border-color: rgba(255, 255, 255, 0.6);
+			}
+		}
+	}
+	.frm_submit {
+		input[type="submit"],
+		button {
+			margin: 0;
+			border: 0 none;
+			color: #fff;
+			border: 0 none;
+			background-color: transparent;
+			border-radius: 0;
+			font-family: var(--wp--preset--font-family--larsseit-light);
+			font-size: var(--wp--preset--font-size--large);
+			display: flex;
+			column-gap: 50px;
+			padding-left: 0;
+			padding-right: 0;
+			box-shadow: none;
+			// &::after {
+			// 	content: '->';
+			// 	margin-left: 5px;
+			// }
+			&::after {
+				content: '';
+				width: 31px;
+				height: 25px;
+				background: url(./images/arrow.svg) 50% 50%/100% auto	no-repeat;
+				display: block;
+				transform: translate(-10px, 0);
+				transition: all 0.3s cubic-bezier(0.5, 0, 0.25, 1);
+			}
+			&:hover {
+				background-color: transparent;
+				color: #fff;
+				&::after {
+					transform: translate(0, 0);
+				}
+			}
+		}
+	}
+}
+
+#contact-us-form {
+	.frm_form_fields .frm_fields_container {
+		// display: grid;
+		// // grid-template-columns: 1fr 1fr;
+		// gap: 0 50px;
+		// .frm_form_field, .frm_fields_container > * {
+		// 	grid-column: span 6 / span 6;
+		// 	width: min(0, 1fr);
+		// }
+	}
+}
+
+
+
+// 
+// .with_frm_style .frm-card-element.StripeElement

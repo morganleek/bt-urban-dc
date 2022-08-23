@@ -47,7 +47,7 @@
 					"heading-1": "clamp(1.875rem, 0.0000rem + 2.0833vw, 2.5rem)",
 					"heading-2": "clamp(1.5rem, 0.0000rem + 1.6667vw, 2rem)", 
 					"heading-3": "clamp(1.4rem, -0.0250rem + 1.5833vw, 1.875rem)",
-					"heading-4": "1.3rem",
+					"heading-4": "clamp(1.05rem, -0.3000rem + 1.5000vw, 1.5rem)",
 					"heading-5": "1.2rem",
 					"heading-6": "1rem"
 				},
@@ -127,7 +127,7 @@
 			"h1": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--larsseit-bold)",
-					"fontWeight": "600",
+					"fontWeight": "300",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-1)"
 				}
@@ -135,7 +135,7 @@
 			"h2": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--larsseit-bold)",
-					"fontWeight": "600",
+					"fontWeight": "300",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-2)"
 				}

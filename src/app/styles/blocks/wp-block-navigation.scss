@@ -1,37 +1,140 @@
+.wp-block-navigation__responsive-container.is-menu-open,
+.wp-block-navigation__responsive-container {
+	--navigation-padding-horizontal: 2rem;
+	
+	
+	left: auto;
+	right: 0;
+	height: 100vh;
+	display: flex;
+	transform: translate(100%, 0);
+	transition: all 0.3s;
+	opacity: 1;
+	background: #000 !important;
+	color: #fff !important;
+	padding: 2rem var(--navigation-padding-horizontal);
+	z-index: 1000;
+	justify-content: center;
+	width: calc( 100% - ( 2 * var(--navigation-padding-horizontal) ) );
+	align-items: center;
+	@media (min-width: 600px) {
+		--navigation-padding-horizontal: 3.75rem;
+		width: calc( 60vw - ( 2 * var(--navigation-padding-horizontal) ) );
+	}
+	@media (min-width: 992px) {
+		width: calc( 50vw - ( 2 * var(--navigation-padding-horizontal) ) );
+	}
+	@media (min-width: 1440px) {
+		--navigation-padding-horizontal: max(4.166666vw, 80px);
+		// padding-left: ;
+		// padding-right: max(4.166666vw, 80px);
+	}
+	.wp-block-navigation__responsive-container-content {
+		.wp-block-navigation__container {
+			& > .wp-block-navigation-item {
+				border-bottom: 1px solid #fff;
+				width: 100%;
+				padding-top: 0.8em;
+				padding-bottom: 0.8em;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				& > .wp-block-navigation-item__content {
+					font-size: var(--wp--custom--typography--font-size--heading-2);
+					transition: opacity 0.3s;
+					width: 100%;
+					margin-right: -30px;
+					&:hover {
+						opacity: 0.6;
+					}
+					&[aria-expanded="true"] {
+						& + .wp-block-navigation__submenu-icon {
+							&::after {
+								opacity: 0;
+							}
+						}
+						& + .wp-block-navigation__submenu-icon + .wp-block-navigation__submenu-container {
+							display: block;
+						}
+					}
+				}
+				.wp-block-navigation__submenu-icon {
+					width: 24px;
+					height: 24px;
+					position: relative;
+					&::before,
+					&::after {
+						content: '';
+						width: 100%;
+						height: 2px;
+						background: #fff;
+						position: absolute;
+						top: calc(50% - 1px);
+						left: 0;
+						transition: opacity 0.3s;
+					}
+					&::after {
+						transform: rotate(90deg);
+					}
+					svg {
+						display: none;
+					}
+				}
+				.wp-block-navigation__submenu-container {
+					&:not(.block-editor-block-list__layout) {
+						display: none;
+					}
+				}
+			}
+			
+		}
+
+	}
+
+}
+
 .wp-block-navigation {
 	.wp-block-navigation__responsive-container {
-		left: 50%;
-    height: 100vh;
-    display: flex;
-    transform: translate(100%, 0);
-    transition: all 0.3s;
-		opacity: 1;
-		background: #000 !important;
-		color: #fff !important;
-		padding: 2rem;
-		z-index: 1000;
+		
 		&:not(.is-menu-open) {
 			background: #000 !important;
 			.wp-block-navigation__responsive-container-content {
-				padding-top: calc(2rem + 24px);
+				padding-top: 0;
 			}
 		}
 		&.is-menu-open {
 			transform: translate(0, 0);
+			.wp-block-navigation__responsive-container-content {
+				padding-top: 0;
+			}
+		}
+		.wp-block-navigation__responsive-close {
+			// height: 100%;
+			.wp-block-navigation__responsive-dialog {
+				position: static;
+			}
 		}
 	}
 	.wp-block-navigation__container {
 		width: 100%;
 		gap: 0 !important;
+		margin-bottom: min(4.6875vw, 90px);
 		& > li {
-			border-bottom: 1px solid #fff;
-			width: 100%;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
+			
+			.wp-block-navigation__submenu-container {
+				&:not(.block-editor-block-list__layout) {
+					width: 100% !important;
+					padding: 0 !important;
+					a {
+						font-size: var(--wp--custom--typography--font-size--heading-4);
+					}
+				}
+			}
+			.wp-block-navigation__submenu-icon {
+				display: block !important;
+			}
 		}
-		a {
-			font-size: var(--wp--custom--typography--font-size--heading-2);
-		}
+		
 	}
 	.wp-block-navigation__responsive-container-open.always-shown {
 		transition: opacity 0.3s;
@@ -52,7 +155,11 @@
 		}
 	}
 	.wp-block-navigation__responsive-container-close {
-		transition: opacity 0.3s;
+		top: 3.75rem;
+		right: 3.75rem;
+		@media (min-width: 1440px) {
+			right: max(4.166666vw, 80px);
+		}
 		svg {
 			display: none;
 		}

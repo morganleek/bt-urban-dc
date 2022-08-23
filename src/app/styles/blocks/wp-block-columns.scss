@@ -1,5 +1,13 @@
+@use "../core/mixins";
+
 .wp-block-columns {
+	column-gap: 56px !important;
+	.wp-block-column {
+		@include mixins.trim;
+	}
 	.wp-block-post-content > & {
-		--wp--style--block-gap: 50px;
+		@media (min-width: 782px) {
+			--wp--style--block-gap: 50px;
+		}
 	}
 }
