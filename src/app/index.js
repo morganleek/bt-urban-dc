@@ -35,7 +35,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 	// Nav Scroll Lock
 	if( document.querySelector( '.page-template-overlay-header' ) ) {
-		
 		const header = document.querySelector( 'header.wp-block-template-part' );
 		if( header ) {
 			const start = 10; // header.offsetHeight - 1;
@@ -51,6 +50,19 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			} );
 		}
 	}
+
+	setTimeout( () => {
+		document.querySelectorAll( '.slick-slider' ).forEach( ( slider ) => {
+			const first = slider.querySelector( '.wp-block-getwid-content-slider-slide__wrapper > *:first-child' );
+			if( first ) {
+				const top = first.offsetHeight / 2;
+				slider.querySelectorAll( '.slick-arrow' ).forEach( ( arrow ) => {
+					arrow.style.top = top + 'px';
+				} );
+			}
+		} );
+		// document.querySelector( '.slick-slider .slick-list' )
+	}, 1000 );
 
 	// iOS window height work around  
   window.addEventListener( 'resize', bones_theme_window_height );

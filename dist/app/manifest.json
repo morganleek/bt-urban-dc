@@ -3,10 +3,10 @@
   "app/assets/Larsseit-Light.otf": "app/assets/Larsseit-Light-50878c70.otf",
   "editor.js": "app/editor-a8ba74d6.js",
   "editor.js.map": "app/editor-a8ba74d6.js.map",
-  "main.css": "app/main-62341952.css",
-  "main.css.map": "app/main-62341952.css.map",
-  "main.js": "app/main-b938c22d.js",
-  "main.js.map": "app/main-b938c22d.js.map",
+  "main.css": "app/main-58abac66.css",
+  "main.css.map": "app/main-58abac66.css.map",
+  "main.js": "app/main-70cbf464.js",
+  "main.js.map": "app/main-70cbf464.js.map",
   "runtime.js": "app/runtime-6974b681.js",
   "runtime.js.map": "app/runtime-6974b681.js.map",
   "vendors~main.js": "app/vendors~main-ecd615ae.js",
@@ -17,18 +17,18 @@
         "js": [
           "app/runtime-6974b681.js",
           "app/vendors~main-ecd615ae.js",
-          "app/main-b938c22d.js"
+          "app/main-70cbf464.js"
         ],
         "js.map": [
           "app/runtime-6974b681.js.map",
           "app/vendors~main-ecd615ae.js.map",
-          "app/main-b938c22d.js.map"
+          "app/main-70cbf464.js.map"
         ],
         "css": [
-          "app/main-62341952.css"
+          "app/main-58abac66.css"
         ],
         "css.map": [
-          "app/main-62341952.css.map"
+          "app/main-58abac66.css.map"
         ]
       }
     },

@@ -72,12 +72,14 @@
 		}
 	}
 	button.slick-arrow {
+		--slick-button-sizing: 8px;
 		background: url(./images/chevron-right.svg) 50% 50%/100% auto no-repeat;
-		width: 15px;
+		width: var(--slick-button-sizing);
 		height: 35px;
 		transition: opacity 1s;
-		@media (min-width: 1440px) {
-			width: min(1.04166vw, 20px);
+		@media (min-width: 1024px) {
+			--slick-button-sizing: min(0.78125vw, 15px);
+			// width: min(0.78125vw, 15px);
 		}
 		&[aria-disabled="true"] {
 			opacity: 0;
@@ -86,10 +88,11 @@
 			display: none;
 		}
 		&.slick-next {
-			right: 10px;
+			// right: 10px;
+			right: calc( 20px - (0.5 * var(--slick-button-sizing)) );
 		}
 		&.slick-prev {
-			left: -25px;
+			left: calc( -20px - (0.5 * var(--slick-button-sizing)) ); 
 			transform: translate(0,-50%) rotate(180deg);
 		}
 	}

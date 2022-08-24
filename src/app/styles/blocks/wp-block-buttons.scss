@@ -6,13 +6,15 @@
 				font-size: var(--wp--preset--font-size--large);
 				border-top: 2px solid #fff;
 				border-bottom: 2px solid #fff;
-				padding: 0.4em 0;
 				width: 100%;
 				text-align: left;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				line-height: 1em;
+				// padding: 0.4em 0;
+				// line-height: 1em;
+				line-height: 39px;
+				padding: 0;
 			}
 		}
 		&.is-style-arrow-no-arrow {
@@ -26,7 +28,7 @@
 				// text-align: left;
 				display: flex;
 				// justify-content: space-between;
-				// align-items: center;
+				align-items: center;
 				line-height: 1em;
 				gap: 4.25rem;
 				
@@ -37,12 +39,16 @@
 			.wp-block-button__link {
 				&::after {
 					content: '';
-					width: 31px;
-					height: 25px;
+					width: 21px;
+					height: 17px;
 					background: url(./images/arrow.svg) 50% 50%/100% auto	no-repeat;
 					display: block;
 					transform: translate(-10px, 0);
 					transition: all 0.3s cubic-bezier(0.5, 0, 0.25, 1);
+					@media (min-width: 1440px) {
+						width: 31px;
+						height: 25px;
+					}
 				}
 				&:hover {
 					&::after {

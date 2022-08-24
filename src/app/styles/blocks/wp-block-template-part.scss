@@ -40,12 +40,12 @@ footer {
 		margin-block-start: 60px;
 		padding-bottom: 60px;
 		@media (min-width: 600px) {
-			padding-bottom: 124px;
-			margin-block-start: 157px;
+			padding-bottom: 100px;
+			margin-block-start: 100px;
 		}
 		@media (min-width: 1440px) {
-			margin-block-start: max(10.9375vw, 210px);
-			padding-bottom: min(8.59375vw, 165px);
+			margin-block-start: max(5vw,100px);
+			padding-bottom: min(5vw, 100px);
 		}
 		& > * {
 			align-items: flex-end;

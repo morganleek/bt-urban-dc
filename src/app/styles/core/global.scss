@@ -1,7 +1,11 @@
 :root {
 	--app--header--animation--time: 0.3s;
+	--wp-admin-border-width-focus: 0;
 }
 body {
+	*:focus-visible {
+		outline: none;
+	}
 	@media (max-width: 599px) {
 		--wp--custom--spacing--small: 2rem;
 	}
