@@ -27,11 +27,20 @@
 		.wp-block-cover__inner-container {
 			transition: opacity 0.3s;
 		}
-		&:not(:hover) {
-			.wp-block-cover__background, 
-			.wp-block-cover__inner-container {
-				opacity: 0;
-			}	
+		.wp-block-cover__inner-container {
+			.wp-block-image {
+				max-width: 70%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		@media (hover: hover) {
+			&:not(:hover) {
+				.wp-block-cover__background:not(.block-editor-block-list__layout), 
+				.wp-block-cover__inner-container:not(.block-editor-block-list__layout) {
+					opacity: 0;
+				}	
+			}
 		}
 	}
 	.wp-block-cover__inner-container {
