@@ -86,9 +86,7 @@
 			--slick-button-sizing: min(0.78125vw, 15px);
 			// width: min(0.78125vw, 15px);
 		}
-		&[aria-disabled="true"] {
-			opacity: 0;
-		}
+		
 		&::before {
 			display: none;
 		}
@@ -99,6 +97,10 @@
 		&.slick-prev {
 			left: calc( -20px - (0.5 * var(--slick-button-sizing)) ); 
 			transform: translate(0,-50%) rotate(180deg);
+			&[aria-disabled="true"] {
+				opacity: 0;
+			}
 		}
 	}
 }
+

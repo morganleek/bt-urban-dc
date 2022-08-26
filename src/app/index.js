@@ -53,7 +53,32 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 	setTimeout( () => {
 		adjustSliderArrows();
+		// Loop for sliders
+		document.querySelectorAll( 'button.slick-next' ).forEach( ( button ) => {
+			button.addEventListener( 'click', ( e ) => {
+				if( e.target.classList.contains( 'is-last') && e.target.closest( '.slick-slider' ) ) {
+					const slider = e.target.closest( '.slick-slider' );
+					jQuery( slider ).slick( 'slickGoTo', 0 );
+				}
+			} );
+		} );
+
+		document.querySelectorAll( '.wp-block-getwid-content-slider__wrapper' ).forEach( ( slider ) => {
+			jQuery( slider ).on( 'afterChange', ( e ) => {
+				const current = jQuery( e.target ).slick( 'slickCurrentSlide' );
+				const length = e.target.querySelectorAll( '.wp-block-getwid-content-slider-slide__wrapper' ).length - 1;
+				if( current == length ) {
+					e.target.querySelector( '.slick-next' ).classList.add( 'is-last' );
+				}
+				else {
+					e.target.querySelector( '.slick-next' ).classList.remove( 'is-last' );
+				}
+			} );
+	
+		} );
 	}, 1000 );
+
+	// afterChange
 
 	// iOS window height work around  
   window.addEventListener( 'resize', () => {
@@ -61,6 +86,11 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		adjustSliderArrows();
 	} );
   bones_theme_window_height();
+
+	//
+	// jQuery('.slick-slider').each( ( slide )).on( 'load', () => {
+	// 	console.log( 'loaded' );
+	// } );
 } );
 
 const adjustSliderArrows = () => {
