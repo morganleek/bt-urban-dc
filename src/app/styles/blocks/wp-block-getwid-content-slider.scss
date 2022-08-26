@@ -77,6 +77,11 @@
 		width: var(--slick-button-sizing);
 		height: 35px;
 		transition: opacity 1s;
+		opacity: 0;
+		transition: opacity 0.3s;
+		&.is-visible {
+			opacity: 1;
+		}
 		@media (min-width: 1024px) {
 			--slick-button-sizing: min(0.78125vw, 15px);
 			// width: min(0.78125vw, 15px);

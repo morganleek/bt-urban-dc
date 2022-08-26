@@ -40,7 +40,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			const start = 10; // header.offsetHeight - 1;
 			gsap.timeline( {
 				scrollTrigger: {
-					trigger: 'main',
+					trigger: '.wp-block-post-content',
 					start: start + "px start",
 					end: "bottom 20px",
 					scrub: 1,
@@ -52,22 +52,31 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	}
 
 	setTimeout( () => {
-		document.querySelectorAll( '.slick-slider' ).forEach( ( slider ) => {
-			const first = slider.querySelector( '.wp-block-getwid-content-slider-slide__wrapper > *:first-child' );
-			if( first ) {
-				const top = first.offsetHeight / 2;
-				slider.querySelectorAll( '.slick-arrow' ).forEach( ( arrow ) => {
-					arrow.style.top = top + 'px';
-				} );
-			}
-		} );
-		// document.querySelector( '.slick-slider .slick-list' )
+		adjustSliderArrows();
 	}, 1000 );
 
 	// iOS window height work around  
-  window.addEventListener( 'resize', bones_theme_window_height );
+  window.addEventListener( 'resize', () => {
+		bones_theme_window_height();
+		adjustSliderArrows();
+	} );
   bones_theme_window_height();
 } );
+
+const adjustSliderArrows = () => {
+	document.querySelectorAll( '.slick-slider' ).forEach( ( slider ) => {
+		const first = slider.querySelector( '.wp-block-getwid-content-slider-slide__wrapper > *:first-child' );
+		if( first ) {
+			const top = first.offsetHeight / 2;
+			slider.querySelectorAll( '.slick-arrow' ).forEach( ( arrow ) => {
+				arrow.style.top = top + 'px';
+				if( !arrow.classList.contains('is-visible') ) {
+					arrow.classList.add( 'is-visible' );
+				} 
+			} );
+		}
+	} );
+}
 
 // iOS window height
 const bones_theme_window_height = () => {
