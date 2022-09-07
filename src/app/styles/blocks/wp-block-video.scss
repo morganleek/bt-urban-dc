@@ -6,3 +6,18 @@
 		
 	}
 }
+
+.wp-block-post-content > {
+	* {
+		&.wp-block-video:first-child {
+			max-height: 90vh;
+			height: 56.296296vw;
+			overflow: hidden;
+			video {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
