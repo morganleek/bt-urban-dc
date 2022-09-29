@@ -1,8 +1,6 @@
 .wp-block-navigation__responsive-container.is-menu-open,
 .wp-block-navigation__responsive-container {
 	--navigation-padding-horizontal: 2rem;
-	
-	
 	left: auto;
 	right: 0;
 	height: 100vh;
@@ -85,12 +83,9 @@
 						display: none;
 					}
 				}
-			}
-			
+			}	
 		}
-
 	}
-
 }
 
 .wp-block-navigation {
@@ -138,14 +133,28 @@
 	}
 	.wp-block-navigation__responsive-container-open.always-shown {
 		transition: opacity 0.3s;
+		border-top: 2px solid;
+		border-bottom: 2px solid;
+		width: 22px;
+    height: 16px;
+		position: relative;
+		@media (min-width: 600px) {
+			width: 26px;
+			height: 20px;
+		}
 		svg {
 			display: none;
 		}
 		&::before {
 			content: '';
-			width: 30px;
-			height: 25px;
-			background: url(./images/hamburger.svg) 50% 50%/100% auto no-repeat;
+			width: 100% !important;
+			height: 2px;
+			background: #fff;
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -1px);
+			// height: 25px;
+			// background: url(./images/hamburger.svg) 50% 50%/100% auto no-repeat;
 			@media (min-width: 1440px) {
 				width: min(2.083333vw, 40px);
 			}

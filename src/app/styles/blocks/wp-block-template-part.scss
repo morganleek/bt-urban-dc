@@ -21,10 +21,11 @@ header {
 		margin-right: calc( var(--wp--custom--spacing--outer) * -1 );
 	}
 	& > .wp-block-group {
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 		@media (min-width: 600px) {
-			padding: min(2.2395vw, 43px) 0; // min(1.5625vw, 30px); 
+			// padding: min(2.2395vw, 43px) 0; // min(1.5625vw, 30px); 
+			padding: clamp(1.25rem, 0.8929rem + 0.9524vw, 1.75rem) 0;
 		}
 	}
 	.page-template-overlay-header:not(.nav-is-fixed) & {

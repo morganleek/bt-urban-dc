@@ -4,11 +4,10 @@
 		transform: translate(-20px, 0) scale(1);
 		transition: all var(--app--header--animation--time);
 		@media (min-width: 600px) {
-			width: min(11.979166666666668vw, 230px);
-			transform: translate(20%, 0) scale(1);
-		}
-		@media (min-width: 1440px) {
-			
+			// width: min(11.979166666666668vw, 230px);
+			// transform: translate(20%, 0) scale(1);
+			width: 120px; 
+			transform: translate(calc(min(13.5rem, 11.25vw) - var(--wp--custom--spacing--outer) - 36px));
 		}
 		#living-with {
 			transition: opacity var(--app--header--animation--time);
