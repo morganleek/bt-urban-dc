@@ -2,6 +2,11 @@
 	&.wp-block-getwid-images-slider,
 	&.wp-block-getwid-content-slider {
 		margin-top: min(4.270833vw, 82px) !important;
+	}	
+}
+.wp-site-blocks > .wp-block-post-content > *:where(:not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide)) {
+	&.wp-block-getwid-images-slider,
+	&.wp-block-getwid-content-slider {
 		margin-left: 0 !important;
 		margin-right: auto !important;
 	}	
