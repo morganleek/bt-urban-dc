@@ -3,8 +3,8 @@
   "app/assets/Larsseit-Light.otf": "app/assets/Larsseit-Light-50878c70.otf",
   "editor.js": "app/editor-a8ba74d6.js",
   "editor.js.map": "app/editor-a8ba74d6.js.map",
-  "main.css": "app/main-7396d1f3.css",
-  "main.css.map": "app/main-7396d1f3.css.map",
+  "main.css": "app/main-dc038eb7.css",
+  "main.css.map": "app/main-dc038eb7.css.map",
   "main.js": "app/main-ef92e229.js",
   "main.js.map": "app/main-ef92e229.js.map",
   "runtime.js": "app/runtime-6974b681.js",
@@ -25,10 +25,10 @@
           "app/main-ef92e229.js.map"
         ],
         "css": [
-          "app/main-7396d1f3.css"
+          "app/main-dc038eb7.css"
         ],
         "css.map": [
-          "app/main-7396d1f3.css.map"
+          "app/main-dc038eb7.css.map"
         ]
       }
     },
