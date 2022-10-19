@@ -80,11 +80,18 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 	// afterChange
 
-	// iOS window height work around  
+	
+	window.addEventListener( 'load', () => {
+		bones_theme_window_height();
+		adjustSliderArrows();
+	} );
+
   window.addEventListener( 'resize', () => {
 		bones_theme_window_height();
 		adjustSliderArrows();
 	} );
+
+	// iOS window height work around  
   bones_theme_window_height();
 
 	//
