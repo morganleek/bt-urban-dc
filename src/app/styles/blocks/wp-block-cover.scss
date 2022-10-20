@@ -37,7 +37,9 @@
 					align-items: center;
 					justify-content: center;
 					img {
-						max-width: 40vw;
+						@media (max-width: 800px) {
+							max-width: 40vw;
+						}
 					}
 				}
 			}
