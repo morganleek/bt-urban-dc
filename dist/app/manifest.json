@@ -1,28 +1,28 @@
 {
   "app/assets/Larsseit-Bold.otf": "app/assets/Larsseit-Bold-0c2438f3.otf",
   "app/assets/Larsseit-Light.otf": "app/assets/Larsseit-Light-50878c70.otf",
-  "editor.js": "app/editor-a8ba74d6.js",
-  "editor.js.map": "app/editor-a8ba74d6.js.map",
+  "editor.js": "app/editor-fe928259.js",
+  "editor.js.map": "app/editor-fe928259.js.map",
   "main.css": "app/main-d5539588.css",
   "main.css.map": "app/main-d5539588.css.map",
-  "main.js": "app/main-ef92e229.js",
-  "main.js.map": "app/main-ef92e229.js.map",
+  "main.js": "app/main-b4722872.js",
+  "main.js.map": "app/main-b4722872.js.map",
   "runtime.js": "app/runtime-6974b681.js",
   "runtime.js.map": "app/runtime-6974b681.js.map",
-  "vendors~main.js": "app/vendors~main-ecd615ae.js",
-  "vendors~main.js.map": "app/vendors~main-ecd615ae.js.map",
+  "vendors~main.js": "app/vendors~main-a9ea6611.js",
+  "vendors~main.js.map": "app/vendors~main-a9ea6611.js.map",
   "wpackioEp": {
     "main": {
       "assets": {
         "js": [
           "app/runtime-6974b681.js",
-          "app/vendors~main-ecd615ae.js",
-          "app/main-ef92e229.js"
+          "app/vendors~main-a9ea6611.js",
+          "app/main-b4722872.js"
         ],
         "js.map": [
           "app/runtime-6974b681.js.map",
-          "app/vendors~main-ecd615ae.js.map",
-          "app/main-ef92e229.js.map"
+          "app/vendors~main-a9ea6611.js.map",
+          "app/main-b4722872.js.map"
         ],
         "css": [
           "app/main-d5539588.css"
@@ -36,11 +36,11 @@
       "assets": {
         "js": [
           "app/runtime-6974b681.js",
-          "app/editor-a8ba74d6.js"
+          "app/editor-fe928259.js"
         ],
         "js.map": [
           "app/runtime-6974b681.js.map",
-          "app/editor-a8ba74d6.js.map"
+          "app/editor-fe928259.js.map"
         ]
       }
     }

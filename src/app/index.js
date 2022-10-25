@@ -22,16 +22,22 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 	} );
 
+	// Fade cover/video
+	if( document.querySelector( '.wp-block-post-content > .wp-block-video.alignfull:first-child, .wp-block-post-content > .wp-block-cover.alignfull:first-child' ) ) {
+		const first = document.querySelector( '.wp-block-post-content > .wp-block-video.alignfull:first-child, .wp-block-post-content > .wp-block-cover.alignfull:first-child' );
 
-	// document.querySelectorAll( '.wp-block-gallery.is-style-gallery-slider' ).forEach( ( slides ) => {
-	// 	const slider = tns( {
-	// 		container: slides,
-	// 		items: 1,
-	// 		slideBy: 'page',
-	// 		autoplay: true,
-	// 		nonce: 'blurns'
-	// 	} );
-	// } );
+		gsap.to( first, {
+      opacity: 0,
+      ease: 'none',
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: first,
+        start: 'top top',
+        end: '80% top',
+        scrub: true
+      }
+    });
+	}
 
 	// Nav Scroll Lock
 	if( document.querySelector( '.page-template-overlay-header' ) ) {
