@@ -49,13 +49,18 @@
 				max-width: 70%;
 				margin-left: auto;
 				margin-right: auto;
+				max-height: 100%;
+				img {
+					max-width: 80%;
+					max-height: 100%;
+				}
 			}
 		}
 		@media (hover: hover) {
 			&:not(:hover) {
 				.wp-block-cover__background:not(.block-editor-block-list__layout), 
 				.wp-block-cover__inner-container:not(.block-editor-block-list__layout) {
-					opacity: 0;
+					// opacity: 0;
 				}	
 			}
 		}

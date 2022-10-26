@@ -8,6 +8,13 @@
 				"page",
 				"post"
 			]
+		},
+		{
+			"name": "short-sliders",
+			"title": "Short Sliders",
+			"postTypes": [
+				"page"
+			]
 		}
 	],
 	"settings": {
