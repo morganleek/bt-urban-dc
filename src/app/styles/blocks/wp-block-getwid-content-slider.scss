@@ -52,7 +52,7 @@
 	// --app--header--height
 	// 256
 	.wp-block-getwid-content-slider-slide {
-		--twin-slider-height: calc( ( 100vh - ( 220px + var( --app--header--height ) + min(4.270833vw, 82px) ) ) / 2 );
+		--twin-slider-height: calc( ( 100vh - ( 240px + var( --app--header--height ) + min(4.270833vw, 82px) ) ) / 2 );
 		.wp-block-getwid-content-slider-slide__wrapper,
 		.wp-block-getwid-content-slider-slide__wrapper {
 			& > .wp-block-cover {
