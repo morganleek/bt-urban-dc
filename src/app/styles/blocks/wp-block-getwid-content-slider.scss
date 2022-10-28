@@ -19,13 +19,15 @@
 
 .wp-block-getwid-images-slider,
 .wp-block-getwid-content-slider {
-	
 	width: 100%;
 	max-width: 915px !important; // 80vw !important;
 	@media (min-width: 1440px) { 
-		
 		max-width: min( 65.5729166vw, 1259px ) !important; 
 	}
+	// --twin-slider-max-width: 500px;
+	// .page-template-short-sliders & {
+	// 	max-width: 300px !important;
+	// }
 	.wp-block-getwid-images-slider__wrapper,
 	.wp-block-getwid-content-slider__wrapper {
 		.slick-list {
