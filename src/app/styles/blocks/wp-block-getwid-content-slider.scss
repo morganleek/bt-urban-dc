@@ -24,10 +24,10 @@
 	@media (min-width: 1440px) { 
 		max-width: min( 65.5729166vw, 1259px ) !important; 
 	}
-	// --twin-slider-max-width: 500px;
-	// .page-template-short-sliders & {
-	// 	max-width: 300px !important;
-	// }
+	--twin-slider-max-width: calc( ( 100vw - ( 2 * var(--wp--custom--spacing--outer) ) ) * 0.8 );
+	.page-template-short-sliders & {
+		max-width: var(--twin-slider-max-width) !important;
+	}
 	.wp-block-getwid-images-slider__wrapper,
 	.wp-block-getwid-content-slider__wrapper {
 		.slick-list {
