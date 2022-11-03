@@ -28,3 +28,10 @@
     box-sizing: border-box;
 	}
 }
+
+img {
+	transition: opacity 0.2s;
+	&.lazy:not(.loaded) {
+		opacity: 0;
+	}
+}
