@@ -3,17 +3,53 @@
 		// Grab submitted data and forward to Campagin Monitor
 
 		$key = "DBk5zvv7p6oGLsypQCiFNmaqG1hU6GX5JzhEagor3qfAUTsjK3goltPazN3T1txj71ROKSq8dkRfzVuHXLXK4riIWoRdb7v399cfaLL16c/EVkrbZo5L/rUUJx6xw5kRfyrzdCi5OhNzU/5flnJX9g==";
-		$client_id = "af368c38f894d1defafdfd6f69e33522";
+
+		// Live and test numbers differ
+		$fid = array(
+			'name' => 6, 
+			'project' => 11, // 7 on local, // 11 on live
+			'phone' => 8,
+			'email' => 9,
+			'comment' => 10
+		);
 
 		if( $_POST['form_key'] == 'contact' ) { // Check it is the correct form
-			$name = $_POST['item_meta'][6];
-			$project = $_POST['item_meta'][7];
-			$phone = $_POST['item_meta'][8];
-			$email = $_POST['item_meta'][9];
-			$comment = $_POST['item_meta'][10];
+			$name = $_POST['item_meta'][$fid['name']];
+			$project = $_POST['item_meta'][$fid['project']];
+			// $phone = $_POST['item_meta'][$fid['phone']];
+			$email = $_POST['item_meta'][$fid['email']];
+			// $comment = $_POST['item_meta'][$fid['comment']];
 
 			if( $project != "" ) {
+				$url = "https://api.createsend.com/api/v3.3/subscribers/" . $project . ".json";
+				
+				$data = json_encode( 
+					array(
+						"EmailAddress" => $email,
+						"Name" => $name,
+						// "MobileNumber" => $phone,
+						"Resubscribe" => true,
+						"RestartSubscriptionBasedAutoresponders" => true,
+						"ConsentToTrack" => "Unchanged"
+					)
+				);
+				
+				// POST data to CM
+				$ch = curl_init();
+				
+				curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+				curl_setopt( $ch, CURLOPT_URL, $url );
+				curl_setopt( $ch, CURLOPT_USERPWD, $key . ":x" );
+				curl_setopt( $ch, CURLOPT_HEADER, 0 );
+				curl_setopt( $ch, CURLOPT_POSTFIELDS, $data );
 
+				$result = curl_exec( $ch );
+
+				$result_decoded = json_decode( $result );
+				error_log( print_r( $result_decoded, true ) );
+				if( isset( $result_decoded->Code ) ) {
+					error_log( "Campaign Monitor List Error " . $result_decoded->Code . ": " . $result_decoded->Message );
+				}
 			}
 		}
 	}
