@@ -9,6 +9,9 @@
 	// Extra tools
 	require get_template_directory() . '/inc/tools.php';
 
+	// Campaign Monitor API
+	require get_template_directory() . '/inc/cm-api.php';
+
 	// Do stuff through this plugin
 	class BoneThemeInit {
 		public $enqueue;

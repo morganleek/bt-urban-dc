@@ -133,6 +133,21 @@ form {
 }
 
 .frm_forms.with_frm_style { // frm_style_formidable-style
+	.frm_message {
+		background-color: transparent;
+		text-align: center;
+		max-width: 650px;
+		margin-left: auto;
+		margin-right: auto;
+		& > * {
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 	.frm_none_container {
 		margin-bottom: 0;
 	}
@@ -197,6 +212,16 @@ form {
 			}
 		}
 	}
+	.frm_loading_form {
+		.frm_button_submit {
+			color: #fff !important;
+			background-color: transparent !important;
+			&::before {
+				position: absolute;
+				left: -25px;
+			}
+		}
+	}
 	.frm_submit {
 		@media (min-width: 600px) {
 			margin-left: 51%;
@@ -216,6 +241,7 @@ form {
 			padding-left: 0;
 			padding-right: 0;
 			box-shadow: none;
+			align-items: center;
 			// &::after {
 			// 	content: '->';
 			// 	margin-left: 5px;
@@ -226,31 +252,58 @@ form {
 				height: 25px;
 				background: url(./images/arrow.svg) 50% 50%/100% auto	no-repeat;
 				display: block;
-				transform: translate(-10px, 0);
+				transform: translate(-10px, -2px);
 				transition: all 0.3s cubic-bezier(0.5, 0, 0.25, 1);
 			}
 			&:hover {
 				background-color: transparent;
 				color: #fff;
 				&::after {
-					transform: translate(0, 0);
+					transform: translate(0, -2px);
 				}
 			}
 		}
 	}
-}
 
-#contact-us-form {
-	.frm_form_fields .frm_fields_container {
-		// display: grid;
-		// // grid-template-columns: 1fr 1fr;
-		// gap: 0 50px;
-		// .frm_form_field, .frm_fields_container > * {
-		// 	grid-column: span 6 / span 6;
-		// 	width: min(0, 1fr);
-		// }
+	.frm_blank_field {
+		input[type=text],
+		input[type=password],
+		input[type=url],
+		input[type=tel],
+		input[type=number],
+		input[type=email],
+		textarea,
+		.mce-edit-area iframe,
+		select:not(.ui-datepicker-month):not(.ui-datepicker-year),
+		.frm-g-recaptcha iframe,
+		.g-recaptcha iframe,
+		.frm-card-element.StripeElement,
+		.chosen-container-multi .chosen-choices,
+		.chosen-container-single .chosen-single,
+		:invalid {
+			background: transparent;
+			border-color: #fff;
+			border-width: 0 0 1px 0;
+			color: #fff
+		}
+	}
+	.frm_error {
+		padding-top: 0.5em;
 	}
 }
+
+
+// #contact-us-form {
+// 	.frm_form_fields .frm_fields_container {
+// 		// display: grid;
+// 		// // grid-template-columns: 1fr 1fr;
+// 		// gap: 0 50px;
+// 		// .frm_form_field, .frm_fields_container > * {
+// 		// 	grid-column: span 6 / span 6;
+// 		// 	width: min(0, 1fr);
+// 		// }
+// 	}
+// }
 
 
 

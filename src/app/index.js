@@ -104,6 +104,16 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	// jQuery('.slick-slider').each( ( slide )).on( 'load', () => {
 	// 	console.log( 'loaded' );
 	// } );
+
+	document.querySelectorAll( '.frm_forms.with_frm_style .form-field select option' ).forEach( ( option ) => {
+		if( option.value.indexOf( "::" ) >= 0 ) {
+			const split = option.value.split( "::" );
+			if( split.length == 2 ) {
+				option.value = split[0];
+				option.innerHTML = split[1];
+			}
+		}
+	} );
 } );
 
 const adjustSliderArrows = () => {
