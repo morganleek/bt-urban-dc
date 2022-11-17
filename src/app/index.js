@@ -109,7 +109,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		if( option.value.indexOf( "::" ) >= 0 ) {
 			const split = option.value.split( "::" );
 			if( split.length == 2 ) {
-				option.value = split[0];
+				// option.value = split[0];
 				option.innerHTML = split[1];
 			}
 		}

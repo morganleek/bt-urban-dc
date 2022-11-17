@@ -7,8 +7,10 @@
 		max-height: calc(90vh - var(--app--header--height, 160px));
 		min-height: 0;
 		.page-template-overlay-header & {
-			max-height: 90vh;
-			height: 100vh;
+			@media (min-width: 768px) {
+				max-height: 90vh;
+				height: 100vh;
+			}
 		}
 		& + .wp-block-group.alignfull {
 			margin-top: 0;

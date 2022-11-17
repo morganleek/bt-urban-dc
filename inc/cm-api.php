@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+use Aws\Common\Enum\Size;
+
 	function bones_theme_after_create_entry( $entry_id, $form_id ) {
 		// Grab submitted data and forward to Campagin Monitor
 
@@ -20,7 +23,11 @@
 			$email = $_POST['item_meta'][$fid['email']];
 			// $comment = $_POST['item_meta'][$fid['comment']];
 
-			if( $project != "" ) {
+			// Split project ID and Name
+			$project_split = explode( "::", $project );
+			if( sizeof( $project_split ) > 1 ) {
+				$project = $project_split[0];
+
 				$url = "https://api.createsend.com/api/v3.3/subscribers/" . $project . ".json";
 				
 				$data = json_encode( 
@@ -46,7 +53,7 @@
 				$result = curl_exec( $ch );
 
 				$result_decoded = json_decode( $result );
-				error_log( print_r( $result_decoded, true ) );
+				// error_log( print_r( $result_decoded, true ) );
 				if( isset( $result_decoded->Code ) ) {
 					error_log( "Campaign Monitor List Error " . $result_decoded->Code . ": " . $result_decoded->Message );
 				}

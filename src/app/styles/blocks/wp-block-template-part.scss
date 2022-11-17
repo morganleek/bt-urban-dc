@@ -49,7 +49,7 @@ footer {
 			padding-bottom: min(5vw, 100px);
 		}
 		& > * {
-			align-items: flex-end;
+			align-items: center !important;
 			@media (max-width: 599px) {
 				flex-direction: column;
 				align-items: center;
