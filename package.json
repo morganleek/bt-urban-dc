@@ -5,8 +5,8 @@
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
     "@wpackio/scripts": "^6.4.0",
-    "postcss": "^8.4.16",
-    "sass": "^1.54.4",
+    "postcss": "^8.4.19",
+    "sass": "^1.56.1",
     "url-loader": "^4.1.1"
   },
   "scripts": {
