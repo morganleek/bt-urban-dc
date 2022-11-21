@@ -1,5 +1,4 @@
 .wp-block-site-logo {
-	img,
 	svg {
 		width: 100px;
 		transform: translate(-20px, 0) scale(1);
@@ -16,16 +15,13 @@
 		}
 	}
 	.page-template-overlay-header:not(.nav-is-fixed) & {
-		img,
 		svg {
-			transform: translate(30%, 70%) scale(1.6); // translate(-30%, 0) 
-			#living-with {
-				opacity: 1;
+			@media (min-width: 600px) {
+				transform: translate(30%, 70%) scale(1.6); // translate(-30%, 0) 
+				#living-with {
+					opacity: 1;
+				}
 			}
 		}
 	}
-}
-
-.more {
-	z-index: 100;
 }
