@@ -7,11 +7,15 @@
 		max-height: calc(90vh - var(--app--header--height, 160px));
 		min-height: 0;
 		.page-template-overlay-header & {
-			height: calc(90vh - var(--app--header--height, 160px));
-			margin-top: 0;
 			@media (min-width: 768px) {
 				max-height: 90vh;
 				height: 100vh;
+			}
+			& + .wp-block-cover.alignfull {
+				@media (max-width: 767px) {
+					height: calc(90vh - var(--app--header--height, 160px));
+					margin-top: 0;
+				}
 			}
 		}
 		& + .wp-block-group.alignfull {
