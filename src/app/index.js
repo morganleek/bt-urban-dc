@@ -22,22 +22,36 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 	} );
 
-	// Fade cover/video
-	if( document.querySelector( '.wp-block-post-content > .wp-block-video.alignfull:first-child, .wp-block-post-content > .wp-block-cover.alignfull:first-child' ) ) {
-		const first = document.querySelector( '.wp-block-post-content > .wp-block-video.alignfull:first-child, .wp-block-post-content > .wp-block-cover.alignfull:first-child' );
-
-		gsap.to( first, {
+	// Fade cover/video - may be seperate images for mobile/desktop
+	document.querySelectorAll( '.wp-block-post-content > .wp-block-video.alignfull:first-child, .wp-block-post-content > .wp-block-video.alignfull:first-child + .wp-block-video.alignfull, .wp-block-post-content > .wp-block-cover.alignfull:first-child, .wp-block-post-content > .wp-block-cover.alignfull:first-child + .wp-block-cover.alignfull' ).forEach( ( banner ) => {
+		gsap.to( banner, {
       opacity: 0,
       ease: 'none',
       immediateRender: false,
       scrollTrigger: {
-        trigger: first,
+        trigger: banner,
         start: 'top top',
         end: '80% top',
         scrub: true
       }
     });
-	}
+	} );
+
+
+	// if( document.querySelector( '.wp-block-post-content > .wp-block-video.alignfull:first-child, .wp-block-post-content > .wp-block-cover.alignfull:first-child' ) ) {
+	// 	const first = document.querySelector( '.wp-block-post-content > .wp-block-video.alignfull:first-child, .wp-block-post-content > .wp-block-cover.alignfull:first-child' );
+	// 	gsap.to( first, {
+  //     opacity: 0,
+  //     ease: 'none',
+  //     immediateRender: false,
+  //     scrollTrigger: {
+  //       trigger: first,
+  //       start: 'top top',
+  //       end: '80% top',
+  //       scrub: true
+  //     }
+  //   });
+	// }
 
 	// Nav Scroll Lock
 	if( document.querySelector( '.page-template-overlay-header' ) ) {
