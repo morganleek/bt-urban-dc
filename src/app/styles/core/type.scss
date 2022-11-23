@@ -309,3 +309,27 @@ form {
 
 // 
 // .with_frm_style .frm-card-element.StripeElement
+
+.post-password-form {
+	margin-top: 150px !important;
+	label {
+		display: inline-block;
+	}
+	input[type="password"] {
+		border: 1px solid;
+		color: #fff;
+		width: auto;
+		padding-left: 10px;
+		&::placeholder {
+			color: #b4b4b4;
+		}
+	}
+	input[type="submit"] {
+		border: 0 none;
+		padding: 10px 20px;
+		background: #fff;
+		color: #000;
+		display: inline-block;
+		height: 68px;
+	}
+}
