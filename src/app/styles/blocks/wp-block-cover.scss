@@ -22,9 +22,10 @@
 						height: calc(90vh - var(--app--header--height, 160px));
 						right: 0;
 						background-position: initial !important;
+						pointer-events: none;
 					}
 					& + * {
-						position: relative
+						position: relative;
 					}
 				}
 			}
